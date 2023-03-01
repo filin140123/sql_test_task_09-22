@@ -1,7 +1,7 @@
-create DATABASE sample;
-use sample;
+CREATE DATABASE sample;
+   USE sample;
 
-DROP TABLE IF EXISTS users;
+  DROP TABLE IF EXISTS users;
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) COMMENT 'Имя покупателя',
