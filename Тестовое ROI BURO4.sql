@@ -16,10 +16,10 @@ SELECT users.name
   FROM users
  WHERE birthday_at <= CURRENT_DATE() - INTERVAL 30 YEAR
    AND name IN (SELECT name
-		              FROM users
-		        INNER JOIN orders ON users.id=orders.user_id 
+		  FROM users
+		 INNER JOIN orders ON users.id=orders.user_id 
                  GROUP BY name 
-		            HAVING COUNT(name) >= 3)
+		HAVING COUNT(name) >= 3)
  ORDER BY RAND()
  LIMIT 1;
                 
